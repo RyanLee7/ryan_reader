@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+  ~ This file is part of RedReader.
+  ~
+  ~ RedReader is free software: you can redistribute it and/or modify
+  ~ it under the terms of the GNU General Public License as published by
+  ~ the Free Software Foundation, either version 3 of the License, or
+  ~ (at your option) any later version.
+  ~
+  ~ RedReader is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License
+  ~ along with RedReader.  If not, see <http://www.gnu.org/licenses/>.
+  -->
+
+<PreferenceScreen xmlns:holo="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory holo:title="@string/pref_appearance_theme_header">
+
+        <ListPreference holo:title="@string/pref_appearance_theme_title"
+                        holo:key="@string/pref_appearance_theme_key"
+                        holo:entries="@array/pref_appearance_theme"
+                        holo:entryValues="@array/pref_appearance_theme_return"
+                        holo:defaultValue="red"/>
+
+        <CheckBoxPreference holo:title="@string/pref_appearance_solidblack_title"
+                            holo:key="@string/pref_appearance_solidblack_key"
+                            holo:defaultValue="false"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory holo:title="@string/pref_appearance_locale_header">
+
+        <ListPreference holo:title="@string/pref_appearance_langforce_title"
+                        holo:key="@string/pref_appearance_langforce_key"
+                        holo:entries="@array/pref_appearance_langforce"
+                        holo:entryValues="@array/pref_appearance_langforce_return"
+                        holo:defaultValue="auto"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory holo:title="@string/pref_appearance_font_header">
+
+        <ListPreference holo:title="@string/pref_appearance_fontscale_posts_title"
+                        holo:key="@string/pref_appearance_fontscale_posts_key"
+                        holo:entries="@array/pref_appearance_fontscale"
+                        holo:entryValues="@array/pref_appearance_fontscale_return"
+                        holo:defaultValue="1"/>
+
+        <ListPreference holo:title="@string/pref_appearance_fontscale_comments_title"
+                        holo:key="@string/pref_appearance_fontscale_comments_key"
+                        holo:entries="@array/pref_appearance_fontscale"
+                        holo:entryValues="@array/pref_appearance_fontscale_return"
+                        holo:defaultValue="1"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory holo:title="@string/pref_appearance_thumbnails_header">
+
+        <CheckBoxPreference holo:title="@string/pref_appearance_thumbnails_show_title"
+                            holo:key="@string/pref_appearance_thumbnails_show_key"
+                            holo:defaultValue="true"/>
+
+        <CheckBoxPreference holo:title="@string/pref_appearance_thumbnails_wifionly_title"
+                            holo:key="@string/pref_appearance_thumbnails_wifionly_key"
+                            holo:dependency="@string/pref_appearance_thumbnails_show_key"
+                            holo:defaultValue="false"/>
+
+        <CheckBoxPreference holo:title="@string/pref_appearance_thumbnails_nsfw_show_title"
+                            holo:key="@string/pref_appearance_thumbnails_nsfw_show_key"
+                            holo:dependency="@string/pref_appearance_thumbnails_show_key"
+                            holo:defaultValue="false"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory holo:title="@string/pref_appearance_tabletmode_header">
+
+        <ListPreference holo:title="@string/pref_appearance_twopane_title"
+                        holo:key="@string/pref_appearance_twopane_key"
+                        holo:entries="@array/pref_appearance_twopane"
+                        holo:entryValues="@array/pref_appearance_twopane_return"
+                        holo:defaultValue="auto"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory holo:title="@string/pref_appearance_comments_header">
+
+        <MultiSelectListPreference
+            holo:dialogTitle="@string/pref_appearance_comment_header_items_title"
+            holo:key="@string/pref_appearance_comment_header_items_key"
+            holo:title="@string/pref_appearance_comment_header_items_title"
+            holo:entries="@array/pref_appearance_comment_header_items"
+            holo:entryValues="@array/pref_appearance_comment_header_items_return"
+            holo:defaultValue="@array/pref_appearance_comment_header_items_default" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory holo:title="@string/pref_appearance_other_header">
+
+        <CheckBoxPreference holo:title="@string/pref_appearance_loading_detail_title"
+                        holo:key="@string/pref_appearance_loading_detail_key"
+                        holo:defaultValue="false"/>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

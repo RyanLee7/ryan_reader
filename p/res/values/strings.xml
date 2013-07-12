@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="activity_resolver_use_always">Always</string>
+    <string name="activity_resolver_use_once">Just once</string>
+    <string name="candidates_style">candidates</string>
+    <string name="capital_off">OFF</string>
+    <string name="capital_on">ON</string>
+    <string name="chooseActivity">Choose an action</string>
+    <string name="date_picker_decrement_day_button">Decrease day</string>
+    <string name="date_picker_decrement_month_button">Decrease month</string>
+    <string name="date_picker_decrement_year_button">Decrease year</string>
+    <string name="date_picker_dialog_title">Set date</string>
+    <string name="date_picker_increment_day_button">Increase day</string>
+    <string name="date_picker_increment_month_button">Increase month</string>
+    <string name="date_picker_increment_year_button">Increase year</string>
+    <string name="date_time_done">Done</string>
+    <string name="date_time_set">Set</string>
+    <string name="loading">Loading\u2026</string>
+    <string name="noApplications">No apps can perform this action.</string>
+    <string name="number_picker_decrement_button">Decrease</string>
+    <string name="number_picker_increment_button">Increase</string>
+    <string name="number_picker_increment_scroll_action">Slide up to increase and down to decrease.</string>
+    <string name="number_picker_increment_scroll_mode">%s touch and hold.</string>
+    <string name="ringtone_default">Default ringtone</string>
+    <string name="ringtone_picker_title">Ringtones</string>
+    <string name="ringtone_silent">Silent</string>
+    <string name="time_picker_decrement_hour_button">Decrease hour</string>
+    <string name="time_picker_decrement_minute_button">Decrease minute</string>
+    <string name="time_picker_decrement_set_am_button">Set AM</string>
+    <string name="time_picker_dialog_title">Set time</string>
+    <string name="time_picker_increment_hour_button">Increase hour</string>
+    <string name="time_picker_increment_minute_button">Increase minute</string>
+    <string name="time_picker_increment_set_pm_button">Set PM</string>
+    <string name="time_picker_separator">:</string>
+    <string name="whichApplication">Complete action using</string>
+    <string name="back_button_label">Back</string>
+    <string name="next_button_label">Next</string>
+    <string name="skip_button_label">Skip</string>
+    <string name="app_name">阅读器</string>
+
+    <!-- First Run Dialog -->
+
+    <string name="firstrun_login_title">账号登陆</string>
+    <string name="firstrun_login_message">登陆状态：当前未登陆</string>
+    <string name="firstrun_login_button_now">点击登陆</string>
+    <string name="firstrun_login_button_later">匿名浏览</string>
+
+    <!-- Preference Headers -->
+
+    <string name="prefs_category_appearance">外观</string>
+    <string name="prefs_category_behaviour">行为</string>
+    <string name="prefs_category_cache">缓存管理</string>
+    <string name="prefs_category_menus">主页面菜单</string>
+
+    <!-- Appearance Prefs -->
+
+    <string name="pref_appearance_theme_header">主题</string>
+    <string name="pref_appearance_font_header">字体</string>
+    <string name="pref_appearance_thumbnails_header">缩略图</string>
+    <string name="pref_appearance_tabletmode_header">平板模式</string>
+    <string name="pref_appearance_comments_header">评论</string>
+    <string name="pref_appearance_other_header">其他</string>
+    <string name="pref_appearance_twopane_key">pref_appearance_twopane</string>
+    <string name="pref_appearance_twopane_title">平板模式(两个窗格)</string>
+    <string name="pref_appearance_theme_key">pref_appearance_theme</string>
+    <string name="pref_appearance_theme_title">主题</string>
+    <string name="pref_appearance_solidblack_key">pref_appearance_solidblack</string>
+    <string name="pref_appearance_solidblack_title">夜间模式使用黑色</string>
+    <string name="pref_appearance_fontscale_posts_key">pref_appearance_fontscale_posts</string>
+    <string name="pref_appearance_fontscale_posts_title">帖子字号</string>
+    <string name="pref_appearance_fontscale_comments_key">pref_appearance_fontscale_comments</string>
+    <string name="pref_appearance_fontscale_comments_title">评论字号</string>
+    <string name="pref_appearance_thumbnails_show_key">pref_appearance_thumbnails_show</string>
+    <string name="pref_appearance_thumbnails_show_title">显示缩略图</string>
+    <string name="pref_appearance_thumbnails_nsfw_show_key">pref_appearance_thumbnails_nsfw_show</string>
+    <string name="pref_appearance_thumbnails_nsfw_show_title">NSFW缩略图显示</string>
+    <string name="pref_appearance_thumbnails_wifionly_key">pref_appearance_thumbnails_wifionly</string>
+    <string name="pref_appearance_thumbnails_wifionly_title">只在WIFI下显示缩略图</string>
+    <string name="pref_appearance_loading_detail_key">pref_appearance_loading_detail</string>
+    <string name="pref_appearance_loading_detail_title">显示详细的加载信息</string>
+    <string name="pref_appearance_comment_header_items_key">pref_appearance_comment_header_items</string>
+    <string name="pref_appearance_comment_header_items_title">评论表单显示</string>
+
+    <!-- Behaviour Prefs -->
+
+    <string name="pref_behaviour_actions_post_header">帖子选项</string>
+    <string name="pref_behaviour_actions_comment_header">评论选项</string>
+    <string name="pref_behaviour_posts_header">帖子</string>
+    <string name="pref_behaviour_fling_post_left_key">Fling Post Left Action</string>
+    <string name="pref_behaviour_fling_post_left_title">帖子向左滑动</string>
+    <string name="pref_behaviour_fling_post_right_key">pref_behaviour_fling_post_right</string>
+    <string name="pref_behaviour_fling_post_right_title">帖子向右滑动</string>
+    <string name="pref_behaviour_actions_comment_tap_key">pref_behaviour_actions_comment_tap</string>
+    <string name="pref_behaviour_actions_comment_tap_title">点击评论</string>
+    <string name="pref_behaviour_nsfw_key">pref_behaviour_nsfw</string>
+    <string name="pref_behaviour_nsfw_title">显示NSFW内容</string>
+
+    <!-- Cache Prefs -->
+
+    <string name="pref_cache_pruning">缓存清理</string>
+    <string name="pref_cache_maxage_listing_key">pref_cache_maxage_listing</string>
+    <string name="pref_cache_maxage_listing_title">删除缓存列表</string>
+    <string name="pref_cache_maxage_thumb_key">pref_cache_maxage_thumb</string>
+    <string name="pref_cache_maxage_thumb_title">删除缓存缩略图</string>
+    <string name="pref_cache_maxage_image_key">pref_cache_maxage_image</string>
+    <string name="pref_cache_maxage_image_title">删除缓存图像</string>
+    <string name="pref_cache_precache_images_header">预先缓存图片</string>
+    <string name="pref_cache_precache_images_key">pref_cache_precache_images</string>
+    <string name="pref_cache_precache_images_title">预先缓存图片</string>
+
+    <!-- TODO use listpreference instead -->
+    <string name="pref_cache_precache_images_wifionly_key">pref_cache_precache_images_wifionly</string>
+    <string name="pref_cache_precache_images_wifionly_title">只在WIFI下</string>
+
+    <!-- Menu Prefs -->
+
+    <string name="pref_menus_post_context_items_key">pref_menus_post_context_items</string>
+    <string name="pref_menus_post_context_items_title">帖子菜单列表</string>
+    <string name="pref_menus_post_toolbar_items_key">pref_menus_post_toolbar_items</string>
+    <string name="pref_menus_post_toolbar_items_title">评论菜单列表</string>
+
+    <!-- Options Menu -->
+
+    <string name="options_accounts">账号</string>
+    <string name="options_accounts_long">Reddit.com账号</string>
+    <string name="options_theme">主题</string>
+    <string name="options_settings">设置</string>
+    <string name="options_submit_post">提交帖子</string>
+    <string name="options_refresh">更新</string>
+    <string name="options_refresh_subreddits">更新数据</string>
+    <string name="options_refresh_posts">更新帖子</string>
+    <string name="options_refresh_comments">更新评论</string>
+    <string name="options_past">过去的版本</string>
+    <string name="options_past_posts">过去的帖子列表版本</string>
+    <string name="options_past_comments">过去的评论列表版本</string>
+    <string name="options_sort">排序</string>
+    <string name="options_sort_subreddits">话题排序</string>
+    <string name="options_sort_posts">帖子排序</string>
+    <string name="options_sort_comments">评论排序</string>
+    <!-- Main Menu -->
+
+    <string name="mainmenu_frontpage">首页</string>
+    <string name="mainmenu_all">所有话题</string>
+    <string name="mainmenu_custom">查找话题</string>
+    <string name="mainmenu_custom_invalid_name">无效话题.</string>
+    <string name="mainmenu_saved">保存的帖子</string>
+    <string name="mainmenu_hidden">隐藏的帖子</string>
+    <string name="mainmenu_upvoted">投正票的帖子</string>
+    <string name="mainmenu_inbox">收件箱</string>
+    <string name="mainmenu_profile">个人资料</string>
+    <string name="mainmenu_header_subreddits">话题</string>
+    <!-- General Listing -->
+
+    <string name="listing_cached">从缓存查看</string>
+    <!-- Accounts Dialog -->
+
+    <string name="accounts_anon"> 匿名浏览</string>
+    <string name="accounts_active">已激活</string>
+    <string name="accounts_add">登陆Reddit.com 账号</string>
+    <string name="accounts_setactive">激活账号</string>
+    <string name="accounts_reauth">重新认证</string>
+    <string name="accounts_delete">删除</string>
+    <string name="accounts_loggingin">登陆中…</string>
+    <string name="accounts_loggingin_msg">请稍候…</string>
+    <string name="accounts_username">用户名</string>
+    <string name="accounts_password">密码</string>
+    <string name="accounts_login">登陆</string>
+    <string name="accounts_delete_sure">确定注销此账号？</string>
+    <!-- Post Sorts -->
+
+    <string name="sort_posts_hot">热门的帖子</string>
+    <string name="sort_posts_new">最新的帖子</string>
+    <string name="sort_posts_rising">上升的帖子</string>
+    <string name="sort_posts_controversial">热议的帖子</string>
+    <string name="sort_posts_top">置顶的帖子</string>
+    <string name="sort_posts_top_hour">置顶：一小时内</string>
+    <string name="sort_posts_top_today">置顶：一天内</string>
+    <string name="sort_posts_top_week">置顶：一周内</string>
+    <string name="sort_posts_top_month">置顶：一个月内</string>
+    <string name="sort_posts_top_year">置顶：一年内</string>
+    <string name="sort_posts_top_all">置顶：所有时间</string>
+    <!-- Comment Sorts -->
+
+    <string name="sort_comments_best">最好的</string>
+    <string name="sort_comments_hot">热门的</string>
+    <string name="sort_comments_new">最新的</string>
+    <string name="sort_comments_old">旧的</string>
+    <string name="sort_comments_controversial">热议的的</string>
+    <string name="sort_comments_top">置顶</string>
+    <!-- Dialog Buttons -->
+
+    <string name="dialog_close">关闭</string>
+    <string name="dialog_cancel">取消</string>
+    <string name="dialog_yes">确定</string>
+    <string name="dialog_no">取消</string>
+    <string name="dialog_go">前往</string>
+    <!-- Thing Actions -->
+
+    <string name="action_menu_post_title">帖子操作</string>
+    <string name="action_upvote">投正票</string>
+    <string name="action_downvote">投反票</string>
+    <string name="action_vote_remove">删除投票</string>
+    <string name="action_upvote_remove">删除正票</string>
+    <string name="action_downvote_remove">删除反票</string>
+    <string name="action_save">保存</string>
+    <string name="action_hide">隐藏</string>
+    <string name="action_unsave">不保存</string>
+    <string name="action_unhide">不隐藏</string>
+    <string name="action_external">使用外部浏览器浏览</string>
+    <string name="action_external_short">使用浏览器</string>
+    <string name="action_actionmenu_short">操作</string>
+    <string name="action_actionmenu">帖子操作</string>
+    <string name="action_comment_links">评论中的链接</string>
+    <string name="action_selftext_links">帖子中的链接</string>
+    <string name="action_share">分享</string>
+    <string name="action_share_comments">分享评论</string>
+    <string name="action_copy">复制</string>
+    <string name="action_gotosubreddit">前往此话题</string>
+    <string name="action_reply">回复</string>
+    <string name="action_edit">编辑</string>
+    <string name="action_user_profile">用户信息</string>
+    <string name="action_user_profile_short">用户</string>
+    <string name="action_properties">属性</string>
+    <string name="action_comments">浏览评论</string>
+    <string name="action_comments_switch">切换到评论</string>
+    <string name="action_comments_short">评论</string>
+    <string name="action_link">打开链接</string>
+    <string name="action_link_switch">切换到链接</string>
+    <string name="action_link_short">链接</string>
+    <string name="action_collapse">显示全部/摘要</string>
+    <string name="action_nothing">无</string>
+    <string name="action_report">报告</string>
+    <string name="action_report_sure">确定要报告这个？</string>
+    <string name="action_save_image">保存图片</string>
+    <string name="action_save_image_success">保存到图片文件夹</string>
+    <!-- Download Messages -->
+
+    <string name="download_waiting">请稍等…</string>
+    <string name="download_connecting">连接中…</string>
+    <string name="download_downloadstarting">开始下载…</string>
+    <string name="download_downloading">下载中…</string>
+    <string name="download_loading">加载中…</string>
+    <string name="download_done">完成.</string>
+    <string name="download_failed">失败.</string>
+    <!-- Image View -->
+
+    <string name="imageview_oom">内存溢出，请尝试使用内置浏览器</string>
+    <string name="imageview_invalid_gif">无效 GIF. 请尝试使用内置浏览器.</string>
+    <!-- Comment Reply/Edit, Post Submit -->
+
+    <string name="comment_reply_send">发送</string>
+    <string name="comment_edit_save">保存</string>
+    <string name="comment_reply_preview">预览</string>
+    <string name="comment_reply_submitting_title">提交中…</string>
+    <string name="comment_reply_submitting_message">请稍等…</string>
+    <string name="comment_reply_oncancel">等待操作结果…</string>
+    <string name="comment_reply_done">回复已发送，刷新可见</string>
+    <string name="comment_edit_done">回复已编辑，刷新可见</string>
+    <string name="post_submit_title_hint">标题</string>
+    <string name="post_submit_subreddit_hint">话题</string>
+    <string name="post_captcha_title">验证码</string>
+    <string name="post_captcha_submit_button">提交</string>
+    <string name="post_submit_done">帖子提交</string>
+    <!-- Bug Reporting -->
+
+    <string name="bug_title">发生错误</string>
+    <string name="bug_message">应用出现错误\n\n是否发送错误信息？</string>
+    <string name="bug_button_send">通过邮箱发送错误信息</string>
+    <string name="bug_button_ignore">不发送</string>
+    <!-- General errors -->
+
+    <string name="error_403_title">无效用户</string>
+    <string name="error_403_message">该用户没有相关权限</string>
+    <string name="error_subreddit_required_title">必需的话题</string>
+    <string name="error_subreddit_required_message">你必须选择一个话题 </string>
+    <string name="error_bad_captcha_title">验证码不正确</string>
+    <string name="error_bad_captcha_message">验证码不正确，请重新输入</string>
+    <string name="error_404_title">找不到页面</string>
+    <string name="error_404_message">找不到请求的数据</string>
+    <string name="error_unknown_api_title">未知</string>
+    <string name="error_unknown_api_message">服务器未知错误，请重新连接</string>
+    <string name="error_redditdown_title">Reddit.com已关闭</string>
+    <string name="error_redditdown_message">Reddit.com超过负载，请重新连接</string>
+    <string name="error_cancelled_title">取消操作</string>
+    <string name="error_cancelled_message">当前操作已取消</string>
+    <string name="error_parse_title">解析错误</string>
+    <string name="error_parse_message">服务器数据出错</string>
+    <string name="error_unexpected_cache_title">缓存丢失错误</string>
+    <string name="error_unexpected_cache_message">出现与缓存相关的内部错误.</string>
+    <string name="error_unexpected_storage_title">存储错误</string>
+    <string name="error_unexpected_storage_message">出现与缓存相关的存储错误.</string>
+    <string name="error_connection_title">连接错误</string>
+    <string name="error_connection_message">连接服务器错误，请检测网络状态</string>
+    <string name="error_malformed_url_title">URL错误</string>
+    <string name="error_malformed_url_message">无效的URL</string>
+    <string name="error_unknown_title">未知错误</string>
+    <string name="error_unknown_message">未知错误，请重新连接</string>
+    <!-- Post list specific errors -->
+
+    <string name="error_postlist_cache_title">缓存数据已用完</string>
+    <string name="error_postlist_cache_message">缓存数据已用完，请刷新</string>
+    <string name="error_postlist_redditdown_title">服务器关闭</string>
+    <string name="error_postlist_redditdown_message">服务器关闭</string>
+    <!-- Session List -->
+
+    <string name="session_active">激活</string>
+    <!-- Time -->
+
+    <string name="time_ago">%s 前</string>
+    <!-- User Profile -->
+
+    <string name="userprofile_created">创建</string>
+    <string name="userprofile_hasmail">邮箱</string>
+    <string name="userprofile_hasmodmail">现代邮箱</string>
+    <string name="userprofile_isfriend">是不是朋友</string>
+    <string name="userprofile_isgold">Reddit金牌会员</string>
+    <string name="userprofile_moderator">是不是版主</string>
+    <string name="userprofile_viewcomments">查看评论</string>
+    <string name="userprofile_viewposts">查看帖子</string>
+    <!-- Comment/Post Properties -->
+
+    <string name="props_comment_title">评论属性</string>
+    <string name="props_post_title">帖子属性</string>
+    <string name="props_error_title">错误属性</string>
+    <string name="props_title">标题</string>
+    <string name="props_author">作者</string>
+    <string name="props_author_flair">资质</string>
+    <string name="props_created">创建</string>
+    <string name="props_edited">编辑</string>
+    <string name="props_score">得分</string>
+    <string name="props_subreddit">话题</string>
+    <string name="props_url">URL</string>
+    <string name="props_num_comments">评论数</string>
+    <string name="props_body_markdown">主体</string>
+    <string name="props_self_markdown">文本</string>
+    <string name="props_never">从不</string>
+    <string name="props_up">上升</string>
+    <string name="props_down">下降</string>
+    <!-- General -->
+
+    <string name="general_true">是</string>
+    <string name="general_false">不是</string>
+    <!-- 2013-05-17 Arrays -->
+
+    <string name="pref_appearance_twopane_never">从不</string>
+    <string name="pref_appearance_twopane_auto">自动检测</string>
+    <string name="pref_appearance_twopane_landscape">概览模式</string>
+    <string name="pref_appearance_twopane_force">总是</string>
+    <string name="theme_name_red">红色</string>
+    <string name="theme_name_night">夜晚</string>
+    <string name="theme_name_green">绿色</string>
+    <string name="theme_name_blue">蓝色</string>
+    <string name="theme_name_ltblue">浅蓝</string>
+    <string name="theme_name_orange">橙色</string>
+    <string name="theme_name_gray">灰色</string>
+    <string name="time_1hr">1 小时</string>
+    <string name="time_6hr">6 小时</string>
+    <string name="time_1day">1 天</string>
+    <string name="time_3day">3 天</string>
+    <string name="time_1week">1 周</string>
+    <string name="time_1month">1 月</string>
+    <string name="time_3month">3 月</string>
+    <string name="pref_appearance_comment_header_items_author">作者</string>
+    <string name="pref_appearance_comment_header_items_flair">资质</string>
+    <string name="pref_appearance_comment_header_items_score">得分</string>
+    <string name="pref_appearance_comment_header_items_upsdowns">正票/反票</string>
+    <string name="pref_appearance_comment_header_items_age">Age</string>
+    <!-- 2013-05-17 -->
+
+    <string name="error_toast_notloggedin">进行此操作前必须登陆</string>
+    <string name="button_moredetail">更多细节</string>
+    <string name="pref_appearance_scale_normal">默认</string>
+    <string name="error_invalid_password_title">密码错误</string>
+    <string name="error_invalid_password_message">用户名或密码错误</string>
+    <string name="error_ratelimit_title">尝试次数过多</string>
+    <string name="error_ratelimit_message">此IP登陆失败次数过多</string>
+    <string name="general_success">成功</string>
+    <string name="message_nowloggedin">已登陆</string>
+    <string name="message_cannotlogin">无法登陆</string>
+    <string name="error_toast_no_urls_in_comment">评论中没有URL</string>
+    <string name="error_toast_no_urls_in_self">正文中没有URL</string>
+    <string name="error_toast_parent_post_not_downloaded">父帖子还未下载</string>
+    <string name="download_subreddits">下载话题…</string>
+    <string name="subtitle_points">点击</string>
+    <string name="subtitle_by">由</string>
+    <string name="subtitle_to">发布到</string>
+    <string name="subtitle_replies">回复</string>
+    <string name="subtitle_reply">回复</string>
+    <string name="general_unknown">未知</string>
+    <string name="action_search">搜索</string>
+    <string name="search_subreddit_restrict">高级搜索</string>
+    <string name="title_changelog">关于红阅</string>
+    <string name="pref_behaviour_commentsort_key">pref_behaviour_commentsort</string>
+    <string name="pref_behaviour_commentsort">默认评论排序</string>
+    <!-- 2013-05-18 -->
+
+    <string name="action_fling_disabled">关闭</string>
+    <string name="pref_about_version_key">pref_about_version</string>
+    <string name="pref_about_version_title">版本</string>
+    <string name="pref_about_changelog_key">pref_about_changelog</string>
+    <string name="prefs_category_about">关于</string>
+    <!-- 2013-06-07 -->
+
+    <string name="pref_behaviour_sort_header">排序</string>
+    <!-- 2013-06-09 -->
+
+    <string name="pref_appearance_locale_header">区域设置</string>
+    <string name="pref_appearance_langforce_key">pref_appearance_langforce_key</string>
+    <string name="pref_appearance_langforce_title">语言</string>
+    <string name="lang_auto">自动</string>
+    <string name="lang_en">English</string>
+    <string name="lang_da">Danish</string>
+    <string name="lang_de">German</string>
+
+</resources>

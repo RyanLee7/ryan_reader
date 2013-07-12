@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+  ~ This file is part of RedReader.
+  ~
+  ~ RedReader is free software: you can redistribute it and/or modify
+  ~ it under the terms of the GNU General Public License as published by
+  ~ the Free Software Foundation, either version 3 of the License, or
+  ~ (at your option) any later version.
+  ~
+  ~ RedReader is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License
+  ~ along with RedReader.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<PreferenceScreen xmlns:holo="http://schemas.android.com/apk/res-auto" >
+
+    <PreferenceCategory holo:title="@string/pref_behaviour_sort_header" >
+        <ListPreference
+            holo:defaultValue="best"
+            holo:entries="@array/pref_behaviour_commentsort_array"
+            holo:entryValues="@array/pref_behaviour_commentsort_array_return"
+            holo:key="@string/pref_behaviour_commentsort_key"
+            holo:title="@string/pref_behaviour_commentsort" />
+    </PreferenceCategory>
+    <PreferenceCategory holo:title="@string/pref_behaviour_actions_post_header" >
+        <ListPreference
+            holo:defaultValue="downvote"
+            holo:entries="@array/pref_behaviour_fling_post_actions"
+            holo:entryValues="@array/pref_behaviour_fling_post_actions_return"
+            holo:key="@string/pref_behaviour_fling_post_left_key"
+            holo:title="@string/pref_behaviour_fling_post_left_title" />
+        <ListPreference
+            holo:defaultValue="upvote"
+            holo:entries="@array/pref_behaviour_fling_post_actions"
+            holo:entryValues="@array/pref_behaviour_fling_post_actions_return"
+            holo:key="@string/pref_behaviour_fling_post_right_key"
+            holo:title="@string/pref_behaviour_fling_post_right_title" />
+    </PreferenceCategory>
+    <PreferenceCategory holo:title="@string/pref_behaviour_actions_comment_header" >
+        <ListPreference
+            holo:defaultValue="action_menu"
+            holo:entries="@array/pref_behaviour_actions_comment"
+            holo:entryValues="@array/pref_behaviour_actions_comment_return"
+            holo:key="@string/pref_behaviour_actions_comment_tap_key"
+            holo:title="@string/pref_behaviour_actions_comment_tap_title" />
+    </PreferenceCategory>
+    <PreferenceCategory holo:title="@string/pref_behaviour_posts_header" >
+        <CheckBoxPreference
+            holo:defaultValue="false"
+            holo:enabled="false"
+            holo:key="@string/pref_behaviour_nsfw_key"
+            holo:title="@string/pref_behaviour_nsfw_title" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

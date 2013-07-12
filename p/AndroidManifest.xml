@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ This file is part of RedReader.
+  ~
+  ~ RedReader is free software: you can redistribute it and/or modify
+  ~ it under the terms of the GNU General Public License as published by
+  ~ the Free Software Foundation, either version 3 of the License, or
+  ~ (at your option) any later version.
+  ~
+  ~ RedReader is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License
+  ~ along with RedReader.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ryan.ryanreader"
+    android:installLocation="auto"
+    android:versionCode="39"
+    android:versionName="1.7.5" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="16" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <application
+        android:name="com.ryan.ryanreader.RedReader"
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:theme="@style/RR.Startup" >
+        <activity
+            android:name="com.ryan.ryanreader.activities.MainActivity"
+            android:clearTaskOnLaunch="false"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:finishOnTaskLaunch="false" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.ryan.ryanreader.settings.SettingsActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden" />
+        <activity
+            android:name="com.ryan.ryanreader.activities.PostListingActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden" />
+        <activity
+            android:name="com.ryan.ryanreader.activities.CommentListingActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden" />
+        <activity
+            android:name="com.ryan.ryanreader.activities.WebViewActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:theme="@style/RR.Dark.NoActionBar" />
+        <activity
+            android:name="com.ryan.ryanreader.activities.ImageViewActivity"
+            android:theme="@style/RR.Dark.NoActionBar" />
+        <activity
+            android:name="com.ryan.ryanreader.activities.CommentReplyActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden" />
+        <activity
+            android:name="com.ryan.ryanreader.activities.CommentEditActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden" />
+        <activity
+            android:name="com.ryan.ryanreader.activities.PostSubmitActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden" />
+        <activity
+            android:name="com.ryan.ryanreader.activities.CaptchaActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden" />
+        <activity
+            android:name="com.ryan.ryanreader.activities.BugReportActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:launchMode="singleInstance"
+            android:theme="@style/Holo.Theme" />
+
+        <!-- 友盟统计 -->
+        <service
+            android:name="com.umeng.common.net.DownloadingService"
+            android:exported="true"
+            android:process=":DownloadingService" >
+        </service>
+
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="51cab98c56240b9744014766" >
+        </meta-data>
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="Channel ID" />
+
+        <activity
+            android:name="com.umeng.fb.ui.SendFeedback"
+            android:windowSoftInputMode="adjustResize" />
+        <activity android:name="com.umeng.fb.ui.FeedbackConversations" />
+        <activity
+            android:name="com.umeng.fb.ui.FeedbackConversation"
+            android:configChanges="keyboard" />
+        <!-- 果盟广告 -->
+        <activity android:name="cn.guomob.android.GuomobAdActivity" />
+    </application>
+
+</manifest>
