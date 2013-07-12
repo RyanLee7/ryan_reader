@@ -60,6 +60,12 @@ public class MainMenuFragment extends Fragment implements
 
 	private boolean force;
 
+	/**
+	 * FRONTPAGE 首页 CUSTOM 查找 ALL 所有话题
+	 * 
+	 * @author ryanlee
+	 * 
+	 */
 	public static enum MainMenuAction {
 		FRONTPAGE, PROFILE, INBOX, LIKED, SAVED, HIDDEN, CUSTOM, ALL
 	}
@@ -104,6 +110,8 @@ public class MainMenuFragment extends Fragment implements
 		// TODO load menu position?
 
 		final Context context;
+
+		// 优先使用容器
 		if (container != null) {
 			context = container.getContext(); // TODO just use the inflater's
 												// context in every case?
@@ -111,10 +119,13 @@ public class MainMenuFragment extends Fragment implements
 			context = inflater.getContext();
 		}
 
+		// 获得默认账户
 		final RedditAccount user = RedditAccountManager.getInstance(context)
 				.getDefaultAccount();
 
 		final LinearLayout outer = new LinearLayout(context);
+
+		// 垂直
 		outer.setOrientation(LinearLayout.VERTICAL);
 
 		notifications = new LinearLayout(context);
@@ -126,6 +137,7 @@ public class MainMenuFragment extends Fragment implements
 		final ListView lv = new ListView(context);
 		lv.setDivider(null);
 
+		// listview尾部添加一个进度条
 		lv.addFooterView(notifications);
 
 		final int paddingPx = General.dpToPixels(context, 8);

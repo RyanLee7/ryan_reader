@@ -29,14 +29,17 @@ public abstract class UpdateNotifier<E> {
 		listeners.add(new WeakReference<E>(updateListener));
 	}
 
+	/**
+	 * 通知所有监听器
+	 */
 	public synchronized void updateAllListeners() {
 
 		final Iterator<WeakReference<E>> iter = listeners.iterator();
 
-		while(iter.hasNext()) {
+		while (iter.hasNext()) {
 			final E listener = iter.next().get();
 
-			if(listener == null) {
+			if (listener == null) {
 				iter.remove();
 			} else {
 				notifyListener(listener);
@@ -45,5 +48,10 @@ public abstract class UpdateNotifier<E> {
 
 	}
 
+	/**
+	 * 通知某个监听器
+	 * 
+	 * @param listener
+	 */
 	protected abstract void notifyListener(E listener);
 }

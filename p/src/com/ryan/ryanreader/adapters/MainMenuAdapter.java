@@ -39,35 +39,40 @@ import java.util.Collection;
 
 public class MainMenuAdapter extends BaseAdapter {
 
-	private final ArrayList<MainMenuItem> items = new ArrayList<MainMenuItem>(100);
+	private final ArrayList<MainMenuItem> items = new ArrayList<MainMenuItem>(
+			100);
 	private final RedditAccount user;
 	private final MainMenuSelectionListener selectionListener;
 
-	private final Drawable rrIconPerson, rrIconEnvOpen, rrIconSend, rrIconStarFilled, rrIconCross, rrIconThumbUp;
+	private final Drawable rrIconPerson, rrIconEnvOpen, rrIconSend,
+			rrIconStarFilled, rrIconCross, rrIconThumbUp;
 
 	private final Context context;
 
-	public MainMenuAdapter(final Context context, final RedditAccount user, final MainMenuSelectionListener selectionListener) {
+	public MainMenuAdapter(final Context context, final RedditAccount user,
+			final MainMenuSelectionListener selectionListener) {
 
 		this.user = user;
 		this.selectionListener = selectionListener;
 		this.context = context;
 
 		final TypedArray attr = context.obtainStyledAttributes(new int[] {
-				R.attr.rrIconPerson,
-				R.attr.rrIconEnvOpen,
-				R.attr.rrIconSend,
-				R.attr.rrIconStarFilled,
-				R.attr.rrIconCross,
-				R.attr.rrIconThumbUp
-		});
+				R.attr.rrIconPerson, R.attr.rrIconEnvOpen, R.attr.rrIconSend,
+				R.attr.rrIconStarFilled, R.attr.rrIconCross,
+				R.attr.rrIconThumbUp });
 
-		rrIconPerson = context.getResources().getDrawable(attr.getResourceId(0, 0));
-		rrIconEnvOpen = context.getResources().getDrawable(attr.getResourceId(1, 0));
-		rrIconSend = context.getResources().getDrawable(attr.getResourceId(2, 0));
-		rrIconStarFilled = context.getResources().getDrawable(attr.getResourceId(3, 0));
-		rrIconCross = context.getResources().getDrawable(attr.getResourceId(4, 0));
-		rrIconThumbUp = context.getResources().getDrawable(attr.getResourceId(5, 0));
+		rrIconPerson = context.getResources().getDrawable(
+				attr.getResourceId(0, 0));
+		rrIconEnvOpen = context.getResources().getDrawable(
+				attr.getResourceId(1, 0));
+		rrIconSend = context.getResources().getDrawable(
+				attr.getResourceId(2, 0));
+		rrIconStarFilled = context.getResources().getDrawable(
+				attr.getResourceId(3, 0));
+		rrIconCross = context.getResources().getDrawable(
+				attr.getResourceId(4, 0));
+		rrIconThumbUp = context.getResources().getDrawable(
+				attr.getResourceId(5, 0));
 
 		build();
 	}
@@ -103,19 +108,21 @@ public class MainMenuAdapter extends BaseAdapter {
 
 		final MainMenuItem item = items.get(i);
 
-		if(convertView == null) {
-			if(item.isHeader) {
+		if (convertView == null) {
+			if (item.isHeader) {
 				convertView = new ListSectionHeader(viewGroup.getContext());
 			} else {
 				convertView = new ListItemView(viewGroup.getContext());
 			}
 		}
 
-		if(item.isHeader) {
-			((ListSectionHeader)convertView).reset(item.title);
+		if (item.isHeader) {
+			((ListSectionHeader) convertView).reset(item.title);
 		} else {
-			final boolean firstInSection = (i == 0) || items.get(i - 1).isHeader;
-			((ListItemView)convertView).reset(item.icon, item.title, firstInSection);
+			final boolean firstInSection = (i == 0)
+					|| items.get(i - 1).isHeader;
+			((ListItemView) convertView).reset(item.icon, item.title,
+					firstInSection);
 		}
 
 		return convertView;
@@ -124,35 +131,57 @@ public class MainMenuAdapter extends BaseAdapter {
 	// Only run in UI thread
 	private void build() {
 
-		//items.add(new MainMenuItem("Reddit"));
+		// items.add(new MainMenuItem("Reddit"));
 
-		items.add(makeItem(context.getString(R.string.mainmenu_frontpage), MainMenuFragment.MainMenuAction.FRONTPAGE, null, null));
-		items.add(makeItem(context.getString(R.string.mainmenu_all), MainMenuFragment.MainMenuAction.ALL, null, null));
-		items.add(makeItem(context.getString(R.string.mainmenu_custom), MainMenuFragment.MainMenuAction.CUSTOM, null, null));
+		// 首页
+		items.add(makeItem(context.getString(R.string.mainmenu_frontpage),
+				MainMenuFragment.MainMenuAction.FRONTPAGE, null, null));
+		// 所有话题
+		items.add(makeItem(context.getString(R.string.mainmenu_all),
+				MainMenuFragment.MainMenuAction.ALL, null, null));
+		// 查找话题
+		items.add(makeItem(context.getString(R.string.mainmenu_custom),
+				MainMenuFragment.MainMenuAction.CUSTOM, null, null));
 
-		if(!user.isAnonymous()) {
+		// 不是匿名的，加上用户信息VIEW
+		if (!user.isAnonymous()) {
 
 			items.add(new MainMenuItem(user.username));
 
-			items.add(makeItem(context.getString(R.string.mainmenu_profile), MainMenuFragment.MainMenuAction.PROFILE, null, rrIconPerson));
-			items.add(makeItem(context.getString(R.string.mainmenu_inbox), MainMenuFragment.MainMenuAction.INBOX, null, rrIconEnvOpen));
-			//items.add(makeItem("Submitted Posts", MainMenuFragment.MainMenuAction.SUBMITTED, null, rrIconSend));
-			items.add(makeItem(context.getString(R.string.mainmenu_saved), MainMenuFragment.MainMenuAction.SAVED, null, rrIconStarFilled));
-			items.add(makeItem(context.getString(R.string.mainmenu_hidden), MainMenuFragment.MainMenuAction.HIDDEN, null, rrIconCross));
-			items.add(makeItem(context.getString(R.string.mainmenu_upvoted), MainMenuFragment.MainMenuAction.LIKED, null, rrIconThumbUp));
+			items.add(makeItem(context.getString(R.string.mainmenu_profile),
+					MainMenuFragment.MainMenuAction.PROFILE, null, rrIconPerson));
+			items.add(makeItem(context.getString(R.string.mainmenu_inbox),
+					MainMenuFragment.MainMenuAction.INBOX, null, rrIconEnvOpen));
+			// items.add(makeItem("Submitted Posts",
+			// MainMenuFragment.MainMenuAction.SUBMITTED, null, rrIconSend));
+			items.add(makeItem(context.getString(R.string.mainmenu_saved),
+					MainMenuFragment.MainMenuAction.SAVED, null,
+					rrIconStarFilled));
+			items.add(makeItem(context.getString(R.string.mainmenu_hidden),
+					MainMenuFragment.MainMenuAction.HIDDEN, null, rrIconCross));
+			items.add(makeItem(context.getString(R.string.mainmenu_upvoted),
+					MainMenuFragment.MainMenuAction.LIKED, null, rrIconThumbUp));
 		}
 
-		items.add(new MainMenuItem(context.getString(R.string.mainmenu_header_subreddits)));
-		//items.add(makeItem("Add Subreddit", null, null, null)); // TODO
+		// 话题
+		items.add(new MainMenuItem(context
+				.getString(R.string.mainmenu_header_subreddits)));
+		// items.add(makeItem("Add Subreddit", null, null, null)); // TODO
 
+		// notifyDataSetChanged()可以在修改适配器绑定的数组后，不用重新刷新Activity，通知Activity更新ListView。
 		notifyDataSetChanged();
+
 	}
 
-	private MainMenuItem makeItem(final int nameRes, final MainMenuFragment.MainMenuAction action, final String actionName, final Drawable icon) {
+	private MainMenuItem makeItem(final int nameRes,
+			final MainMenuFragment.MainMenuAction action,
+			final String actionName, final Drawable icon) {
 		return makeItem(context.getString(nameRes), action, actionName, icon);
 	}
 
-	private MainMenuItem makeItem(final String name, final MainMenuFragment.MainMenuAction action, final String actionName, final Drawable icon) {
+	private MainMenuItem makeItem(final String name,
+			final MainMenuFragment.MainMenuAction action,
+			final String actionName, final Drawable icon) {
 
 		final View.OnClickListener clickListener = new View.OnClickListener() {
 			public void onClick(final View view) {
@@ -163,7 +192,8 @@ public class MainMenuAdapter extends BaseAdapter {
 		return new MainMenuItem(name, icon, clickListener, null);
 	}
 
-	private MainMenuItem makeItem(final String name, final RedditSubreddit subreddit) {
+	private MainMenuItem makeItem(final String name,
+			final RedditSubreddit subreddit) {
 
 		final View.OnClickListener clickListener = new View.OnClickListener() {
 			public void onClick(final View view) {
@@ -174,13 +204,20 @@ public class MainMenuAdapter extends BaseAdapter {
 		return new MainMenuItem(name, null, clickListener, null);
 	}
 
+	/**
+	 * 设置子话题
+	 * 
+	 * @param subreddits
+	 */
 	public void setSubreddits(final Collection<RedditSubreddit> subreddits) {
 
+		// 通过Looper.getMainLooper()获取当前应用系统中主线程的Looper对象
 		new Handler(Looper.getMainLooper()).post(new Runnable() {
 			public void run() {
 
-				for(final RedditSubreddit subreddit : subreddits) {
-					items.add(makeItem(subreddit.display_name.toLowerCase(), subreddit));
+				for (final RedditSubreddit subreddit : subreddits) {
+					items.add(makeItem(subreddit.display_name.toLowerCase(),
+							subreddit));
 				}
 
 				notifyDataSetChanged();
@@ -199,7 +236,7 @@ public class MainMenuAdapter extends BaseAdapter {
 	}
 
 	public void clickOn(final int position) {
-		if(position < items.size()) {
+		if (position < items.size()) {
 			items.get(position).onClick(null);
 		}
 	}
